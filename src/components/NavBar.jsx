@@ -3,15 +3,12 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { LinkButton } from "./buttons/LinkButton";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 const navItems = ["Home", "Catalog", "Favorites"];
@@ -30,15 +27,16 @@ export const NavBar = (props) => {
         CurrentCarRent
       </Typography>
       <Divider />
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+      <Box sx={{ display: "flex", flexDirection: "column" }}>
+        {navItems.map((item) => {
+          const link = item === "Home" ? "/" : item;
+          return (
+            <LinkButton sx={{ color: "black" }} key={item} to={link}>
+              {item}
+            </LinkButton>
+          );
+        })}
+      </Box>
     </Box>
   );
 
@@ -61,13 +59,16 @@ export const NavBar = (props) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: "block" }}
-          >
-            CurrentCarRent
-          </Typography>
+          <Box sx={{ flexGrow: 1, display: "block" }}>
+            <Typography
+              variant="h6"
+              component={Link}
+              to={"/"}
+              sx={{ textDecoration: "none", color: "white" }}
+            >
+              CurrentCarRent
+            </Typography>
+          </Box>
           <Box sx={{ display: { mobile: "none", tablet: "block" } }}>
             {navItems.map((item) => {
               const link = item === "Home" ? "/" : item;

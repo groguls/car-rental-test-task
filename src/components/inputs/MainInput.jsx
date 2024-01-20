@@ -1,13 +1,6 @@
-import {
-  Autocomplete,
-  InputAdornment,
-  MenuItem,
-  OutlinedInput,
-  Select,
-  TextField,
-} from "@mui/material";
+import { Autocomplete, TextField } from "@mui/material";
 import { useState } from "react";
-import { ShevronDown } from "../icons/ShevronDown";
+// import { ShevronDown } from "../icons/ShevronDown";
 
 export const mainInputStyle = {
   display: "flex",

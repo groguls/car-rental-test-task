@@ -1,3 +1,9 @@
+import { CatalogCard } from "../components/CatalogCard";
+
 export const Catalog = () => {
-  return <div>Catalog</div>;
+  return (
+    <div>
+      <CatalogCard />
+    </div>
+  );
 };
