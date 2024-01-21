@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/static/js/main.8d8f6978.js",
+    "static/media/car-parking.jpg": "/static/media/car-parking.52b2064b912446d451d2.jpg",
+    "index.html": "/index.html",
+    "main.8d8f6978.js.map": "/static/js/main.8d8f6978.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.8d8f6978.js"
+  ]
+}
