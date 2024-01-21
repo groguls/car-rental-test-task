@@ -37,8 +37,13 @@ export const Home = () => {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <Typography variant="h2">CurrentCarRent</Typography>
-          <Typography variant="subtitle1">
+          <Typography sx={{ fontWeight: "bold" }} variant="h2">
+            CurrentCarRent
+          </Typography>
+          <Typography
+            sx={{ mt: 3, mb: 3, fontWeight: "bold" }}
+            variant="subtitle1"
+          >
             "Empowering Journeys with the Current of CarRent"
           </Typography>
           <MainButton

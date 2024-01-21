@@ -22,7 +22,10 @@ export const NavBar = (props) => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", backgroundColor: "#3470FF", height: "100%" }}
+    >
       <Typography variant="h6" sx={{ my: 2 }}>
         CurrentCarRent
       </Typography>
@@ -31,7 +34,7 @@ export const NavBar = (props) => {
         {navItems.map((item) => {
           const link = item === "Home" ? "/" : item;
           return (
-            <LinkButton sx={{ color: "black" }} key={item} to={link}>
+            <LinkButton sx={{ color: "white" }} key={item} to={link}>
               {item}
             </LinkButton>
           );
@@ -45,7 +48,7 @@ export const NavBar = (props) => {
 
   return (
     <Box component="header" sx={{ display: "flex" }}>
-      <AppBar component="nav">
+      <AppBar component="nav" sx={{ backgroundColor: "#3470FF" }}>
         <Toolbar>
           <IconButton
             color="inherit"

@@ -1,6 +1,5 @@
 import { Autocomplete, TextField } from "@mui/material";
 import { useState } from "react";
-// import { ShevronDown } from "../icons/ShevronDown";
 
 export const mainInputStyle = {
   display: "flex",
@@ -31,19 +30,22 @@ export const mainInputStyle = {
     fontWeight: "500",
     lineHeight: "20px",
   },
+  "& .MuiOutlinedInput-root": {
+    padding: "0 18px",
+    fontFamily: ["Manrope", "sans-serif"].join(","),
+    fontSize: "18px",
+    fontStyle: "normal",
+    fontWeight: "500",
+    lineHeight: "20px",
+  },
 };
 
-const options = ["Option 1", "Option 2"];
-
-export const MainInput = () => {
+export const MainInput = ({ opts }) => {
   const [value, setValue] = useState(null);
   const [inputValue, setInputValue] = useState("");
 
   return (
-    <div>
-      <div>{`value: ${value !== null ? `'${value}'` : "null"}`}</div>
-      <div>{`inputValue: '${inputValue}'`}</div>
-      <br />
+    <>
       <Autocomplete
         value={value}
         onChange={(event, newValue) => {
@@ -54,13 +56,13 @@ export const MainInput = () => {
           setInputValue(newInputValue);
         }}
         id="cars"
-        options={options}
+        options={opts}
         sx={mainInputStyle}
         renderInput={(params) => {
-          console.log(params);
-          return <TextField {...params} />;
+          // console.log(params);
+          return <TextField placeholder="Enter the text" {...params} />;
         }}
       />
-    </div>
+    </>
   );
 };

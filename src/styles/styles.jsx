@@ -59,8 +59,8 @@ export const mainButtonStyle = {
   lineHeight: "20px",
   borderRadius: "12px",
   border: "none",
-  backgroundColor: "#3470FF",
-  borderColor: "#3470FF",
+  backgroundColor: "#0B44CD",
+  borderColor: "#0B44CD",
 
   "&:hover": {
     backgroundColor: "#3470FF",

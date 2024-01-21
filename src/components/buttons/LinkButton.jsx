@@ -11,7 +11,7 @@ export const LinkButton = (props) => {
         borderRadius: "0px",
         border: "none",
         [`&.active`]: {
-          borderBottom: "2px solid black",
+          borderBottom: "2px solid white",
         },
       }}
       {...props}
